@@ -118,12 +118,12 @@ def spin(balance):
         total_bet = bet * lines
         
         if total_bet >  balance:
-            print(f"You do not have enough to bet that amount, yoru current balance is: ${balance}")
+            print(f"You do not have enough to bet that amount, your current balance is: ${balance}")
         else: 
             break
             
    
-    print(f"You are betting ${bet} on {lines}. Total bet is equal to: ${total_bet}")
+    print(f"You are betting ${bet} on {lines} lines. Total bet is equal to: ${total_bet}")
     
     #print(balance, lines)
     
@@ -141,7 +141,7 @@ def main():
     balance = deposit()
     while True:
         print(f"Current balance is: ${balance}")
-        answer = input("Press Enter to play! (a to quit)")
+        answer = input("Press Enter to play! (q to quit)")
         if spin == "q":
             break
         balance +=spin(balance)
